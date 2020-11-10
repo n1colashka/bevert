@@ -1,3 +1,114 @@
 .main-slider {
-    min-height: 545px;
+    padding-bottom: 45px;
+    position: relative;
+
+    &__item {
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba($primary, .7);
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 5;
+        background-color: rgba(#FFFFFF, .9);
+        border-radius: 2px;
+        padding: 60px;
+        max-width: 675px;
+        margin-top: 90px;
+        margin-bottom: 90px;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        color: $primary; 
+    }
+
+    &__text {
+        margin-bottom: 50px;
+        font-size: 24px;
+        line-height: 31px;
+        color: $black;
+    }
+
+    &__btn {
+    }
+
+    // Swiper
+
+    .swiper-pagination {
+        width: 100%;
+        bottom: 0;
+    }
+    .swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 7px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+        background-color: #fff;
+        border: 2px solid rgba(0, 31, 67, 0.5);
+        border-radius: 2px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $primary;
+        border-color: $primary;
+    }
+
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+        background-color: #ffffff;
+        border-radius: 0px 2px 2px 0px;
+        right: 0;
+        left: auto;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            right: 5px;
+            left: 50%;
+            top: calc(50% - 2px);
+            width: 2px;
+            height: 8px;
+            transform: translate(-50%, -50%) rotate(-225deg);
+            background-color: $primary;
+            border-radius: 1px;
+        }
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(45deg);
+            right: 5px;
+            top: calc(50% + 3px);
+        }
+    }
+    .swiper-button-prev {
+        left: 0;
+        right: auto;
+        &::before {
+            transform: translate(-50%, -50%) rotate(225deg);
+        }
+        &::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+    
 }

@@ -28,6 +28,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    function initMainSlider() {
+        const mainSlider = new Swiper('.main-slider__wrapper', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    }
+
     // Функции работающие только на мобильных устройствах
     if (window.innerWidth <= 940) {
         
@@ -35,6 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     initMenu();
     initMenuAccordion();
-
+    initMainSlider();
 
 });

@@ -25,6 +25,19 @@ document.addEventListener('DOMContentLoaded', function () {
         event.target.closest('.header__submenu').classList.toggle('active');
       }
     });
+  }
+
+  function initMainSlider() {
+    var mainSlider = new Swiper('.main-slider__wrapper', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
+    });
   } // Функции работающие только на мобильных устройствах
 
 
@@ -32,4 +45,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
   initMenu();
   initMenuAccordion();
+  initMainSlider();
 });
