@@ -9,6 +9,14 @@
     }
 }
 
+@media (max-width: 1188px) {
+    .services {
+        &__list {
+            justify-content: center;
+        }
+    }
+}
+
 @media (max-width: 1024px) {
     .header {
         &__inner {
@@ -224,6 +232,24 @@
     .title {
         font-size: 24px;
         line-height: 28px;
+    }
+
+    .services {
+        padding-top: 60px; 
+        padding-bottom: 30px;
+        &__name {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        &__item-inner {
+            padding: 30px 15px 45px 30px;
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 19px;
+        }
     }
 }
 

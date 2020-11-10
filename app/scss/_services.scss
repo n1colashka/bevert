@@ -1,0 +1,125 @@
+.services {
+    padding-top: 90px;
+    padding-bottom: 60px;
+
+    &__title {
+        margin-bottom: 60px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0 -10px;
+    }
+
+    &__item-wrapper {
+        max-width: 373px;
+        margin-bottom: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        a {
+            display: block;
+        }
+    }
+
+    &__item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        color: #FFFFFF;
+        border-radius: 2px;
+
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 1;
+            background-color: rgba(#fff, .3);
+
+        }
+    }
+
+    &__item-inner {
+        position: relative;
+        background-color: rgba(0, 31, 67, .9);
+        padding: 40px 28px 60px 28px;
+        min-height: 525px;
+    }
+
+    &__info {
+        position: relative;
+        z-index: 15;
+    }
+
+    &__img {
+        margin-bottom: 30px;
+
+        img {
+            width: 39px;
+        }
+    }
+    
+    &__name {
+        position: relative;
+        display: block;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 0.02em;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: 74px;
+            height: 2px;
+            background-color: #fff;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+    }
+
+    &__btn {
+        display: inline-block;
+        position: absolute;
+        right: 40px;
+        padding-right: 25px;
+        bottom: 40px;
+        font-size: 14px;
+        line-height: 17px;
+        z-index: 13;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            right: 5px;
+            top: calc(50% - 1px);
+            width: 2px;
+            height: 5px;
+            transform: translateY(-50%) rotate(-225deg);
+            background-color: #fff;
+            border-radius: 1px;
+        }
+
+        &::after {
+            transform: translateY(-50%) rotate(45deg);
+            top: calc(50% + 2px);
+        }
+    }
+}
