@@ -1,0 +1,66 @@
+.quote {
+    position: relative;
+    padding: 90px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0, 31, 67, 0.7);
+    }
+
+    &__content {
+        position: relative;
+        z-index: 6;
+        background-color: #FFFFFF;
+        border-radius: 2px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        padding: 60px;
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary;
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        margin-bottom: 50px;
+    }
+
+    &__mobile-icon {
+        display: none;
+    }
+
+    &__text {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 40px;
+    }
+
+    &__author {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    &__img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        width: 300px;
+        flex-shrink: 0;
+    }
+}

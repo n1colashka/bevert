@@ -20,6 +20,18 @@
         margin-left: 10px;
         margin-right: 10px;
 
+        &:hover {
+            .services__btn {
+                &::before,
+                &::after {
+                    right: 10px;
+                }
+            }
+            .services__item-inner {
+                background-color: rgba(0, 31, 67, 1);
+            }
+        }
+        
         a {
             display: block;
         }
@@ -32,7 +44,6 @@
         position: relative;
         color: #FFFFFF;
         border-radius: 2px;
-
 
         &::before {
             position: absolute;
@@ -52,6 +63,7 @@
         background-color: rgba(0, 31, 67, .9);
         padding: 40px 28px 60px 28px;
         min-height: 525px;
+        transition: .3s ease;
     }
 
     &__info {
@@ -104,6 +116,7 @@
         line-height: 17px;
         z-index: 13;
 
+
         &::before,
         &::after {
             position: absolute;
@@ -115,6 +128,7 @@
             transform: translateY(-50%) rotate(-225deg);
             background-color: #fff;
             border-radius: 1px;
+            transition: .3s ease;
         }
 
         &::after {
