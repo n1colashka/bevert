@@ -57,6 +57,7 @@
     &__socials {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
 
         li {
             margin-left: 18px;
