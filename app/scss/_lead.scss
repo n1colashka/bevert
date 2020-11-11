@@ -1,0 +1,127 @@
+.lead {
+    padding: 90px 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__form {
+        background-color: #FAFAFA;
+        border-radius: 2px;
+        padding: 60px 70px;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 40px;
+    }
+
+    &__item {
+        margin-bottom: 20px;
+        input, textarea {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    textarea {
+        height: 160px;
+    }
+
+    textarea, input {
+        font-family: Roboto;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        background-color: #ffffff;
+        color: $black;
+        border: 2px solid rgba(238, 238, 238, 0.81);
+        border-radius: 2px;
+        padding: 20px;
+        outline: none;
+        resize: none;
+
+        &::placeholder {
+            color: #D8D8D8;
+        }
+
+        &:focus {
+            border-color:#001F43;
+        }
+
+        &:invalid {
+            border-color: #EB001B;
+        }
+
+        &:valid {
+            // border-color: #2A7D03;
+        }
+    }
+
+    &__checkbox {
+        margin-top: 5px;
+        margin-bottom: 30px;
+
+        input {
+            display: none;
+
+            &:checked {
+                & ~ .lead__checkbox-item {
+                    &::before {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        label {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+    }
+
+    &__checkbox-item {
+        position: relative;
+        display: block;
+        width: 22px;
+        height: 22px;
+        border: 2px solid #eeeeee;
+        border-radius: 2px;
+        flex-shrink: 0;
+
+        &::before {
+            position: absolute;
+            content: "";
+            background: url('../images/check-icon.svg') center / contain no-repeat;
+            display: none;
+            width: 12px;
+            height: 12px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__policy {
+        margin-left: 12px;
+    }
+
+    &__btn {
+        width: 100%;
+    }
+
+    &__img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        max-width: 695px;
+        width: 100%;
+    }
+}

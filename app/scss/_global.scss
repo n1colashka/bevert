@@ -68,10 +68,14 @@ h6 {
     transition: .3s ease;
     border: 1px solid transparent;
 
-    &:hover {
-        color: $primary;
-        background-color: #fff;
-        border-color: $primary;
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: #011732;
+    }
+
+    &:disabled {
+        background-color: #C4C4C4;
     }
 }
 
