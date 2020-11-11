@@ -6,6 +6,13 @@
     z-index: 30;
     background-color: #ffffff;
 
+    &.opened {
+        position: absolute;
+        height: 100vh;
+        background-color: #FAFAFA;
+        overflow: auto;
+    }
+
     &__inner {
         position: relative;
         display: flex;
@@ -121,10 +128,14 @@
         margin-left: 50px;
     }
 
+    &__btn-wrapper {
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 5px;
+    }
+
     &__mobile-btn {
         display: none;
-        margin-left: 15px;
-        margin-top: 5px;
     }
 
     .header__submenu {

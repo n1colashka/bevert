@@ -4,16 +4,24 @@ document.addEventListener('DOMContentLoaded', function () {
   function initMenu() {
     var $menuBtn = document.querySelector('.header__menu-btn');
     var $menuWrapper = document.querySelector('.header__navigation');
+    var $header = document.querySelector('.header');
+    var $html = document.querySelector('html');
     document.body.addEventListener('click', function (event) {
       if (event.target.closest('.header__navigation')) {
         $menuWrapper.classList.add('active');
         $menuBtn.classList.add('active');
+        $html.classList.add('overflow-off');
+        $header.classList.add('opened');
       } else if (event.target.closest('.header__menu-btn')) {
         $menuWrapper.classList.toggle('active');
         $menuBtn.classList.toggle('active');
+        $html.classList.toggle('overflow-off');
+        $header.classList.toggle('opened');
       } else {
         $menuWrapper.classList.remove('active');
         $menuBtn.classList.remove('active');
+        $header.classList.remove('opened');
+        $html.classList.remove('overflow-off');
       }
     });
   }
@@ -60,6 +68,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     }
+  }
+
+  function initModalWindows() {
+    var headerBtn = document.querySelector('.header__btn');
+    MicroModal.init();
   } // Функции работающие только на мобильных устройствах
 
 
@@ -73,4 +86,5 @@ document.addEventListener('DOMContentLoaded', function () {
   initMenu();
   initMenuAccordion();
   initMainSlider();
+  initModalWindows();
 });

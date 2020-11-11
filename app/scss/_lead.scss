@@ -30,42 +30,8 @@
         }
     }
 
-    textarea {
-        height: 160px;
-    }
-
-    textarea, input {
-        font-family: Roboto;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 18px;
-        background-color: #ffffff;
-        color: $black;
-        border: 2px solid rgba(238, 238, 238, 0.81);
-        border-radius: 2px;
-        padding: 20px;
-        outline: none;
-        resize: none;
-
-        &::placeholder {
-            color: #D8D8D8;
-        }
-
-        &:focus {
-            border-color:#001F43;
-        }
-
-        &:invalid {
-            border-color: #EB001B;
-        }
-
-        &:valid {
-            // border-color: #2A7D03;
-        }
-    }
-
     &__checkbox {
-        margin-top: 5px;
+        margin-top: 25px;
         margin-bottom: 30px;
 
         input {

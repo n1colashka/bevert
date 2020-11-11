@@ -93,13 +93,15 @@
                         <li><a href="#">Блог</a></li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
-                    <button class="header__mobile-btn btn">
-                        Заказать звонок
-                    </button>
+                    <div class="header__btn-wrapper">
+                        <button class="header__mobile-btn btn" data-micromodal-trigger="modal-1">
+                            Заказать звонок
+                        </button>
+                    </div>
                 </nav>
                 <div class="header__call">
                     <a class="header__phone" href="tel:+74951420776" style="background-image: url('images/phone-icon.svg');">+7 495 142-07-76</a>
-                    <button class="header__btn btn">Заказать звонок</button>
+                    <button class="header__btn btn" data-micromodal-trigger="modal-1">Заказать звонок</button>
                     <button class="header__menu-btn">
                         <span></span>
                     </button>
@@ -701,6 +703,46 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <header class="modal__header">
+                <div class="modal__title title" id="modal-1-title">
+                Заказать звонок
+                </div>
+                <div class="modal__subtitle">
+                    <p>
+                        Оставьте заявку и мы свяжемся с вами в течение 10 минут
+                    </p>
+                </div>
+            </header>
+
+                <div class="modal__form">
+                    <form action="#">
+                        <div class="lead__item">
+                            <input type="text" placeholder="Ваше имя">
+                        </div>
+                        <div class="lead__item">
+                            <input type="number" placeholder="Ваш телефон">
+                        </div>
+                        <div class="lead__item">
+                            <input type="email" placeholder="Ваш e-mail">
+                        </div>
+                        <div class="lead__checkbox">
+                            <label>
+                                <input type="checkbox">
+                                <span class="lead__checkbox-item"></span>
+                                <span class="lead__policy">Я ознакомлен(а) и согласен(а) с правилами обработки моих персональных данных</span>
+                            </label>
+                        </div>
+                        <button class="modal__btn btn">Заказать звонок</button>
+                    </form>
+                </div>
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </div>
+        </div>
+    </div>
     
     <script src="js/libs.js"></script>
     <script src="js/main.js"></script>

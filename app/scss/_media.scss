@@ -252,21 +252,30 @@
                 }
             }
 
-            & > a {
-                background-color: $primary;
-                color: #ffffff;
-                padding: 0;
+            &.active {
+                & > a {
+                    background-color: $primary;
+                    color: #ffffff;
+                    padding: 0;
+                    
+                    &::before,
+                    &::after {
+                        background-color: #ffffff;
+                    }
+                }
+            }
 
+            & > a {
                 &::before,
                 &::after {
-                    background-color: #ffffff;
+                    background-color: $primary;
                     right: 20px;
                 }
                 &::after {
                     right: 25px;
                 }
-                
             }
+            
 
         }
 
@@ -288,9 +297,10 @@
             margin-top: 8px;
             padding-bottom: 40px;
             line-height: 20px;
+            background-color: #FAFAFA;
 
             & > ul > li > a {
-                padding: 12px 15px;
+                padding: 25px 15px;
                 display: block;
             }
 
@@ -302,7 +312,12 @@
                 display: block;
                 width: 100%;
                 margin: 0;
-                margin-bottom: 25px;
+                border-bottom: 1px solid rgba(0, 31, 67, 0.3);
+
+                &:last-child {
+                    border-bottom: none;
+                    margin-bottom: 5px;
+                }
             }
 
             a {
@@ -573,6 +588,10 @@
             font-size: 14px;
             line-height: 19px;
         }
+    }
+
+    .header {
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
     }
 }
 

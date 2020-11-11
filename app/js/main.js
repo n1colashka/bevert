@@ -3,17 +3,25 @@ document.addEventListener('DOMContentLoaded', function () {
     function initMenu() {
         const $menuBtn = document.querySelector('.header__menu-btn');
         const $menuWrapper = document.querySelector('.header__navigation');
+        const $header = document.querySelector('.header');
+        const $html = document.querySelector('html');
 
         document.body.addEventListener('click', event => {
             if (event.target.closest('.header__navigation')) {
                 $menuWrapper.classList.add('active');
                 $menuBtn.classList.add('active');
+                $html.classList.add('overflow-off');
+                $header.classList.add('opened');
             } else if (event.target.closest('.header__menu-btn')) {
                 $menuWrapper.classList.toggle('active');
                 $menuBtn.classList.toggle('active');
+                $html.classList.toggle('overflow-off');
+                $header.classList.toggle('opened');
             } else {
                 $menuWrapper.classList.remove('active');
                 $menuBtn.classList.remove('active');
+                $header.classList.remove('opened');
+                $html.classList.remove('overflow-off');
             }
         });
     }
@@ -63,6 +71,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function initModalWindows() {
+        const headerBtn = document.querySelector('.header__btn');
+
+        MicroModal.init();
+        
+    }
+
     // Функции работающие только на мобильных устройствах
     if (window.innerWidth <= 940) {
         
@@ -76,5 +91,6 @@ document.addEventListener('DOMContentLoaded', function () {
     initMenu();
     initMenuAccordion();
     initMainSlider();
+    initModalWindows();
 
 });

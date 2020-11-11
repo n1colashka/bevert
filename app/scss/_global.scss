@@ -44,6 +44,41 @@ h6 {
     padding: 0;
     margin: 0;
 }
+
+textarea {
+    height: 160px;
+}
+
+textarea, input {
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: #ffffff;
+    color: $black;
+    border: 2px solid rgba(238, 238, 238, 0.81);
+    border-radius: 2px;
+    padding: 20px;
+    outline: none;
+    resize: none;
+
+    &::placeholder {
+        color: #D8D8D8;
+    }
+
+    &:focus {
+        border-color:#001F43;
+    }
+
+    &:invalid {
+        border-color: #EB001B;
+    }
+
+    &:valid {
+        // border-color: #2A7D03;
+    }
+}
+
 .container {
     max-width: 1190px;
     width: 100%;
@@ -95,7 +130,7 @@ h6 {
         position: absolute;
         content: "";
         right: 5px;
-        top: calc(50%);
+        top: calc(50% - 0.5px);
         width: 2px;
         height: 6px;
         transform: translateY(-50%) rotate(-225deg);
@@ -106,7 +141,7 @@ h6 {
 
     &::after {
         transform: translateY(-50%) rotate(45deg);
-        top: calc(50% + 3px);
+        top: calc(50% + 2.5px);
     }
 
     &:hover {
@@ -218,5 +253,13 @@ input::-webkit-inner-spin-button {
     }
     &::after {
         transform: translate(-50%, -50%) rotate(-45deg);
+    }
+}
+
+.overflow-off {
+    overflow: hidden;
+
+    body {
+        overflow: hidden;
     }
 }
