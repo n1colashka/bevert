@@ -434,6 +434,47 @@
 }
 
 @media (max-width: 768px) {
+    .error {
+        background-image: none !important;
+        background: rgba(194, 224, 246, 0.35);
+        padding-top: 40px;
+        padding-bottom: 60px;
+
+        &::before {
+            content: none;
+        }
+
+        &__btn {
+            display: none;
+        }
+
+        &__btn-wrapper {
+            text-align: center;
+            margin-left: 0;
+        }
+
+        &__btn-mobile {
+            display: inline-block;
+        }
+        
+        &__title {
+            color: #19283A;
+            margin-bottom: 25px;
+        }
+
+        &__text {
+            display: none;
+        }
+
+        &__text-mobile {
+            display: block;
+        }
+
+        &__inner {
+            min-height: auto;
+        }
+    }
+
     .lead {
         padding: 0;
         background-color: #FAFAFA;
@@ -539,6 +580,12 @@
 }
 
 @media (max-width: 480px) {
+    .error {
+        &__btn-wrapper {
+            width: 100%;
+        }
+    }
+    
     .articles {
         &__item {
             max-width: 100%;
