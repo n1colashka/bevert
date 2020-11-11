@@ -42,9 +42,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function initReviewsSlider() {
     if (document.querySelector('.reviews__slider')) {
-      var reviewsSlider = new Swiper('.swiper-container', {
+      var reviewsSlider = new Swiper('.reviews__slider', {
         pagination: {
           el: '.swiper-pagination.reviews__pagination',
+          clickable: true
+        }
+      });
+    }
+  }
+
+  function initImportantSlider() {
+    if (document.querySelector('.important__slider')) {
+      var importantSlider = new Swiper('.important__slider', {
+        pagination: {
+          el: '.swiper-pagination.important__pagination',
           clickable: true
         }
       });
@@ -54,8 +65,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (window.innerWidth <= 940) {}
 
-  if (window.innerWidth <= 1200) {
+  if (window.innerWidth <= 1024) {
     initReviewsSlider();
+    initImportantSlider();
   }
 
   initMenu();

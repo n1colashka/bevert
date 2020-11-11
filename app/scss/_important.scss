@@ -1,0 +1,42 @@
+.important {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 90px 0;
+
+    &__inner {
+        position: relative;
+    }
+
+    &__title {
+        color: #ffffff;
+        margin-bottom: 60px;
+    }
+
+    &__slider {
+        min-height: 450px;
+    }
+
+    &__list {
+        justify-content: center;
+    }
+
+    &__btn-wrapper {
+        text-align: right;
+        margin-top: 60px;
+    }
+
+    &__btn {
+        color: #ffffff;
+
+        &::before,
+        &::after {
+            background-color: #ffffff;
+        }
+    }
+
+    .articles__item {
+        margin-bottom: 0;
+    }
+}
