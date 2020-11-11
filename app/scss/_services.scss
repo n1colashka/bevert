@@ -22,6 +22,7 @@
 
         &:hover {
             .services__btn {
+                transform: translateX(10px);
                 &::before,
                 &::after {
                     right: 10px;
@@ -107,33 +108,18 @@
     }
 
     &__btn {
-        display: inline-block;
         position: absolute;
         right: 40px;
-        padding-right: 25px;
         bottom: 40px;
+        z-index: 13;
+        padding-right: 25px;
+        color: #ffffff;
         font-size: 14px;
         line-height: 17px;
-        z-index: 13;
-
 
         &::before,
         &::after {
-            position: absolute;
-            content: "";
-            right: 5px;
-            top: calc(50% - 1px);
-            width: 2px;
-            height: 5px;
-            transform: translateY(-50%) rotate(-225deg);
             background-color: #fff;
-            border-radius: 1px;
-            transition: .3s ease;
-        }
-
-        &::after {
-            transform: translateY(-50%) rotate(45deg);
-            top: calc(50% + 2px);
         }
     }
 }

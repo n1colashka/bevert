@@ -35,15 +35,30 @@ document.addEventListener('DOMContentLoaded', function () {
                 prevEl: '.swiper-button-prev',
             },
             pagination: {
-                el: '.swiper-pagination',
+                el: '.swiper-pagination.main-slider__pagination',
                 clickable: true,
             },
         });
     }
 
+    function initReviewsSlider() {
+        if (document.querySelector('.reviews__slider')) {
+            const reviewsSlider = new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination.reviews__pagination',
+                    clickable: true,
+                },
+            });
+        }
+    }
+
     // Функции работающие только на мобильных устройствах
     if (window.innerWidth <= 940) {
         
+    }
+
+    if (window.innerWidth <= 1200) {
+        initReviewsSlider();
     }
 
     initMenu();

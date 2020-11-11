@@ -9,6 +9,34 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .reviews {
+        padding: 60px 0;
+
+        &__slider{
+            width: 290px;
+        }
+
+        &__item {
+            margin: 0;
+        }
+
+        &__slider-inner {
+            margin: 0;
+            flex-wrap: nowrap;
+        }
+
+        &__btn-wrapper {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        &__pagination {
+            bottom: 40px;
+        }
+    }
+}
+
 @media (max-width: 1188px) {
     .services {
         &__list {
@@ -250,6 +278,19 @@
 }
 
 @media (max-width: 768px) {
+    .reviews {
+        &__slider {
+            height: 340px;
+        }
+
+        &__item {
+            height: 100%;
+        }
+
+        &__title {
+            margin-bottom: 40px;
+        }
+    }
     .quote {
         padding: 0;
         
@@ -308,7 +349,7 @@
         }
 
         &__item-inner {
-            padding: 30px 15px 45px 30px;
+            padding: 30px 15px 70px 30px;
         }
 
         &__text {
