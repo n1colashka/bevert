@@ -561,6 +561,15 @@
             line-height: 26px;
             margin-bottom: 35px;
         }
+
+        &__item {
+            display: flex;
+            align-items: center;
+        }
+
+        &__wrapper {
+            height: 530px;
+        }
     }
     
     .page-title {
