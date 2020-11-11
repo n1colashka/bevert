@@ -17,12 +17,18 @@ document.addEventListener('DOMContentLoaded', function () {
         $menuBtn.classList.toggle('active');
         $html.classList.toggle('overflow-off');
         $header.classList.toggle('opened');
-      } else {
+      } else if (event.target.closest('.modal')) {} else {
         $menuWrapper.classList.remove('active');
         $menuBtn.classList.remove('active');
         $header.classList.remove('opened');
         $html.classList.remove('overflow-off');
       }
+
+      document.querySelectorAll('.modal').forEach(function (modal) {
+        if (modal.classList.contains('is-open')) {
+          $html.classList.add('overflow-off');
+        }
+      });
     });
   }
 
@@ -71,8 +77,23 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function initModalWindows() {
-    var headerBtn = document.querySelector('.header__btn');
-    MicroModal.init();
+    var $html = document.querySelector('html');
+
+    function addOverflow() {
+      $html.classList.add('overflow-off');
+    }
+
+    function removeOverflow() {
+      $html.classList.remove('overflow-off');
+    }
+
+    MicroModal.init({
+      debugMode: true,
+      onShow: addOverflow,
+      onClose: removeOverflow,
+      awaitCloseAnimation: true,
+      awaitOpenAnimation: true
+    });
   } // Функции работающие только на мобильных устройствах
 
 

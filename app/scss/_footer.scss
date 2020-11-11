@@ -54,19 +54,6 @@
         margin-bottom: 45px;
     }
 
-    &__socials {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-
-        li {
-            margin-left: 18px;
-            &:first-child {
-                margin-left: 0;
-            }
-        }
-    }
-
     &__contacts {
         address {
             font-style: normal;

@@ -263,3 +263,16 @@ input::-webkit-inner-spin-button {
         overflow: hidden;
     }
 }
+
+.socials {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    li {
+        margin-left: 18px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}

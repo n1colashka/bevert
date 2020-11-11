@@ -4,16 +4,24 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 101;
 }
 
+.modal__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
 .modal__container {
     background-color: #fff;
-    padding: 70px 60px;
+    padding: 60px 70px;
     max-width: 465px;
     max-height: 100vh;
     border-radius: 2px;
