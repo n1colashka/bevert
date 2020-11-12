@@ -101,7 +101,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Функции работающие только на мобильных устройствах
     if (window.innerWidth <= 940) {
-        
+        initMenu();
+        initMenuAccordion();
     }
 
     if (window.innerWidth <= 1024) {
@@ -109,8 +110,6 @@ document.addEventListener('DOMContentLoaded', function () {
         initImportantSlider();
     }
 
-    initMenu();
-    initMenuAccordion();
     initMainSlider();
     initModalWindows();
 
