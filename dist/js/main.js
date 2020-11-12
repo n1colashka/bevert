@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         $menuBtn.classList.add('active');
         $html.classList.add('overflow-off');
         $header.classList.add('opened');
+        console.log('click');
       } else if (event.target.closest('.header__menu-btn')) {
         $menuWrapper.classList.toggle('active');
         $menuBtn.classList.toggle('active');
