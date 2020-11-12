@@ -1,0 +1,29 @@
+.reviews-page {
+
+    &__head {
+        position: relative;
+        margin-top: 100px;
+        min-height: 200px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 0 -22px;
+    }
+
+    &__item {
+        margin-left: 22px;
+        margin-right: 22px;
+        margin-bottom: 30px;
+        max-width: 357px;
+        width: 100%;
+        height: 515px;
+    }
+}
+

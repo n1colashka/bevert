@@ -20,6 +20,10 @@
         flex-wrap: wrap;
     }
 
+    .reviews__item:nth-child(3) ~ .reviews__item {
+        display: none;
+    }
+
     &__item {
         position: relative;
         display: block;
@@ -28,10 +32,7 @@
         background-position: top center;
         width: 365px;
         height: 515px;
-        
-        &:nth-child(3) ~ .reviews__item{
-            display: none;
-        }
+        border-radius: 2px;
     }
 
     &__btn-wrapper {
@@ -52,6 +53,6 @@
     }
 
     &__pagination {
-        bottom: 20px;
+        bottom: -40px;
     }
 }
