@@ -1,0 +1,11 @@
+.article {
+    
+    &__head {
+        min-height: 400px;
+    }
+    
+    .articles__foot {
+        position: static;
+        color: #ffffff;
+    }
+}

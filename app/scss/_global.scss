@@ -160,6 +160,8 @@ textarea, input {
 }
 
 .page-head {
+    display: flex;
+    align-items: center;
     position: relative;
     padding: 60px 0;
     margin-top: 100px;
@@ -183,6 +185,7 @@ textarea, input {
     line-height: 31px;
     letter-spacing: 0.02em;
     color: #FFFFFF;
+    font-weight: 400;
 }
 
 .page-bg {
@@ -228,7 +231,7 @@ textarea, input {
         position: relative;
         font-size: 16px;
         line-height: 19px;
-        color: #979797;
+        color: $primary;
         margin-left: 5px;
 
         &::before {
@@ -240,10 +243,13 @@ textarea, input {
 
         &:first-child {
             margin-left: 0;
-            color: $primary;
             &::before {
                 content: none;
             }
+        }
+
+        &:last-child {
+            color: #979797;
         }
     }
 
