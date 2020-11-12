@@ -221,16 +221,11 @@ textarea, input {
     padding-top: 35px;
     padding-bottom: 60px;
 
-    &__list {
-        display: flex;
-        align-items: center;
-
-    }
-
     li {
         position: relative;
+        display: inline;
         font-size: 16px;
-        line-height: 19px;
+        line-height: 22px;
         color: $primary;
         margin-left: 5px;
 

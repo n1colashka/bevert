@@ -43,6 +43,13 @@
 }
 
 @media (max-width: 1024px) {
+
+    .article {
+        &__img {
+            max-width: 420px;
+        }
+    }
+    
     .footer {
         &__inner {
             justify-content: flex-start;
@@ -453,6 +460,65 @@
 }
 
 @media (max-width: 768px) {
+    .article {
+        padding-bottom: 60px;
+        &__btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            font-size: 0;
+            min-width: auto;
+
+            span {
+                &::before,
+                &::after {
+                    left: 50%;
+                    right: auto;
+                }
+            }
+        }
+        
+        &__text-title {
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 25px;
+        }
+        
+        &__text {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 30px;
+        }
+        
+        &__img {
+            float: none;
+            max-width: 100%;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+        
+        &__head {
+            min-height: auto;
+        }
+        
+        .articles__time {
+            background-image: url('../images/clock-white-icon.svg');
+            color: $primary;
+            padding-left: 25px;
+        }
+    
+        .articles__views {
+            background-image: url('../images/eye-white-icon.svg');
+            color: $primary;
+            padding-left: 25px;
+        }
+    }
+    
     .page-head {
         background-color: rgba(194, 224, 246, 0.35);
         padding: 40px 0;
@@ -741,6 +807,10 @@
     
     .btn {
         width: 100%;
+    }
+
+    .article__btn {
+        width: 40px;
     }
 
     .quote {
