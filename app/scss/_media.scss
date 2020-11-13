@@ -489,6 +489,10 @@
 }
 
 @media (max-width: 768px) {
+    .pagination {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
 
 
     .page-head {
@@ -562,10 +566,6 @@
             p {
                 margin-bottom: 20px;
             }
-        }
-
-        &__list li::before {
-            top: 3px;
         }
     }
     
@@ -682,6 +682,9 @@
             margin-bottom: 20px;
             height: 400px;
         }
+        .reviews-page__title {
+            margin-bottom: 20px;
+        }
     }
     
     .error {
@@ -780,7 +783,7 @@
     }
 
     .main-slider {
-        padding-top: 70px;
+        padding-top: 65px;
         
         &__content {
             padding: 40px 15px;
@@ -808,7 +811,7 @@
     
     .page-title {
         font-size: 30px;
-        line-height: 37px;
+        line-height: 40px;
     }
 
     .title {

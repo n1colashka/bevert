@@ -1,24 +1,13 @@
 .blog {
 
-    &__head {
-    }
-
-    &__bg {
-    }
-
-    &__title {
-    }
-
-    &__subtitle {
-    }
-
-    &__content {
-    }
-
     &__list {
         justify-content: flex-start;
     }
 
+    .blog__list {
+        margin-bottom: -30px;
+    }
+    
     .articles__item {
         margin-bottom: 30px;
     }
