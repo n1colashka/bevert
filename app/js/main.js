@@ -18,20 +18,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 $menuBtn.classList.toggle('active');
                 $html.classList.toggle('overflow-off');
                 $header.classList.toggle('opened');
-            } else if (event.target.closest('.modal')) {
+            } else if (event.target.closest('.modal')) {}
 
-            } else {
+            else if (document.querySelector('.is-open')) {} 
+            else {
                 $menuWrapper.classList.remove('active');
                 $menuBtn.classList.remove('active');
                 $header.classList.remove('opened');
                 $html.classList.remove('overflow-off');
             }
 
-            document.querySelectorAll('.modal').forEach(modal => {
-                if (modal.classList.contains('is-open')) {
-                    $html.classList.add('overflow-off');
-                }
-            });
         });
     }
 
